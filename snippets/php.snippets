@@ -283,27 +283,27 @@ snippet do "do { ... } while (condition)"
 	do {
 		${0}
 	} while (${1});
-snippet if "if (condition) { ... }"
-	if (${1}) {
+snippet if "if(condition) { ... }"
+	if(${1}) {
 		${0}
 	}
-snippet ifn "if (!condition) { ... }"
-	if (!${1}) {
+snippet ifn "if(!condition) { ... }"
+	if(!${1}) {
 		${2}
 	}
-snippet ifil "<?php if (condition): ?> ... <?php endif; ?>"
-	<?php if (${1}): ?>
+snippet ifil "<?php if(condition): ?> ... <?php endif; ?>"
+	<?php if(${1}): ?>
 		${0}
 	<?php endif; ?>
-snippet ife "if (cond) { ... } else { ... }"
-	if (${1}) {
+snippet ife "if(cond) { ... } else { ... }"
+	if(${1}) {
 		${2}
 	} else {
 		${3}
 	}
 	${0}
-snippet ifeil "<?php if (condition): ?> ... <?php else: ?> ... <?php endif; ?>"
-	<?php if (${1}): ?>
+snippet ifeil "<?php if(condition): ?> ... <?php else: ?> ... <?php endif; ?>"
+	<?php if(${1}): ?>
 		${2}
 	<?php else: ?>
 		${3}
@@ -314,11 +314,11 @@ snippet el "else { ... }"
 		${0}
 	}
 snippet eif "elseif(condition) { ... }"
-	elseif (${1}) {
+	elseif(${1}) {
 		${0}
 	}
 snippet switch "switch($var) { case 'xyz': ... default: .... }"
-	switch ($${1:variable}) {
+	switch($${1:variable}) {
 		case '${2:value}':
 			${3}
 			break;
@@ -331,24 +331,24 @@ snippet case "case 'value': ... break"
 	case '${1:value}':
 		${2}
 		break;
-snippet for "for ($i = 0; $i < $count; $i++) { ... }"
-	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
+snippet for "for($i = 0; $i < $count; $i++) { ... }"
+	for($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
 		${0}
 	}
-snippet foreach "foreach ($var as $value) { .. }"
-	foreach ($${1:variable} as $${2:value}) {
+snippet foreach "foreach($var as $value) { .. }"
+	foreach($${1:variable} as $${2:value}) {
 		${0}
 	}
-snippet foreachil "<?php foreach ($var as $value): ?>  ... <?php endforeach; ?>"
-	<?php foreach ($${1:variable} as $${2:value}): ?>
+snippet foreachil "<?php foreach($var as $value): ?>  ... <?php endforeach; ?>"
+	<?php foreach($${1:variable} as $${2:value}): ?>
 		${0}
 	<?php endforeach; ?>
 snippet foreachk "foreach ($var as $key => $value) { .. }"
-	foreach ($${1:variable} as $${2:key} => $${3:value}) {
+	foreach($${1:variable} as $${2:key} => $${3:value}) {
 		${0}
 	}
-snippet foreachkil "<?php foreach ($var as $key => $value): ?>  ... <?php endforeach; ?>"
-	<?php foreach ($${1:variable} as $${2:key} => $${3:value}): ?>
+snippet foreachkil "<?php foreach($var as $key => $value): ?>  ... <?php endforeach; ?>"
+	<?php foreach($${1:variable} as $${2:key} => $${3:value}): ?>
 		${0:<!-- html... -->}
 	<?php endforeach; ?>
 snippet array "$... = ['' => ]"
